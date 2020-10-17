@@ -2,9 +2,178 @@
 /* Apply to all sizes */
 *, *:before, *:after {
   box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Lato";
 }
-
-
+.fixed {
+  background-color: white;
+  height: 6%;
+  position: fixed;
+}
+header {
+  display: flex;
+  width: 100%;
+}
+header > img {
+  max-width: 400px;
+}
+.pages {
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 20px 0 10%;
+}
+.eform {
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.eform > h1 {
+  text-align: center;
+  margin: 25px 0px;
+}
+input[type="text"] {
+  width: 100%;
+  margin: auto;
+  padding: 5px;
+}
+input[type="submit"] {
+  margin: 20px 0px;
+  width: 100%;
+  max-width: 130px;
+  height: 30px;
+  background-color: orange;
+  border: 0;
+  padding: 5px;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.info {
+  margin: 30px auto;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.infoicon {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.infotext {
+  margin-left: 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+}
+.feature {
+  display: flex;
+  margin: 30px;
+}
+div > img {
+  width: 50px;
+}
+.video {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.buy {
+  margin: 0px auto 30px;
+  width: 65%;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
+.bonehead {
+  background-color: silver;
+  padding: 15px 0;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+.trombone {
+  width: 30%;
+  border: 1px black solid;
+}
+h1 {
+  margin: 20px;
+}
+button {
+  background-color: yellow;
+  padding: 10px 20px;
+  border: 0;
+  margin: 20px 0 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+p {
+  margin: 7px 0;
+}
+footer {
+  background-color: silver;
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  justify-content: center;
+  align-items: flex-end;
+  margin: auto;
+  height: 80px;
+  flex-direction: column;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 20%;
+}
+.link {
+  margin-right: 10px;
+}
+.copyright {
+  color: gray;
+  margin-right: 10px;
+}
 /* Add Breakpoints Here */
 /* Apply to certain size and above */
 
+@media only screen and (max-width: 600px) {
+  .fixed {
+    height: 15%;
+  }
+  header > img {
+    margin: 0 auto;
+  }
+  header, .pages {
+    flex-direction: column;
+    margin: auto;
+  }
+  .info {
+    width: 100%;
+  }
+  .infoicon {
+    display: none;
+  }
+  .infotext {
+    text-align: center;
+  }
+  .buy {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .trombone {
+    width: 60%;
+    margin-bottom: 10px;
+  }
+}

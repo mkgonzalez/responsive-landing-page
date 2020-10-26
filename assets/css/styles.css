@@ -6,24 +6,34 @@
   padding: 0px;
   font-family: "Lato";
 }
-.fixed {
+header {
+  display: flex;
+  width: 100%;
   background-color: white;
   height: 6%;
   position: fixed;
 }
-header {
-  display: flex;
-  width: 100%;
-}
 header > img {
   max-width: 400px;
 }
-.pages {
+a {
+  color: black;
+  text-decoration: none;
+}
+.hnav {
   display: flex;
-  width: 40%;
   justify-content: space-around;
   align-items: center;
-  margin: 0 20px 0 10%;
+  margin: 0 20px 0 11%;
+  min-width: 300px;
+}
+header > button {
+  width: 200px;
+  background-color: Black;
+  color: white;
+  align-self: center;
+  margin: 0 20px 0 200px;
+  min-width: 200px;
 }
 .eform {
   padding-top: 100px;
@@ -35,7 +45,7 @@ header > img {
 }
 .eform > h1 {
   text-align: center;
-  margin: 25px 0px;
+  margin: 20px 0px;
 }
 input[type="text"] {
   width: 100%;
@@ -59,24 +69,16 @@ input[type="submit"] {
   display: flex;
   flex-direction: column;
 }
-.infoicon {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-}
-.infotext {
-  margin-left: 60px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: left;
-}
 .feature {
   display: flex;
   margin: 30px;
 }
-div > img {
-  width: 50px;
+.infoicon > img {
+  width: 60px;
+}
+.infotext {
+  margin-left: 60px;
+  flex-direction: column;
 }
 .video {
   display: flex;
@@ -91,15 +93,21 @@ div > img {
   text-align: center;
   justify-content: space-around;
 }
+.trombone {
+  width: 30%;
+  border: 1px black solid;
+}
 .bonehead {
   background-color: silver;
   padding: 15px 0;
   text-transform: uppercase;
   font-size: 10px;
 }
-.trombone {
-  width: 30%;
-  border: 1px black solid;
+ul {
+  list-style-type: none;
+}
+li {
+  margin: 7px 0px;
 }
 h1 {
   margin: 20px;
@@ -112,9 +120,6 @@ button {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-p {
-  margin: 7px 0;
-}
 footer {
   background-color: silver;
   display: flex;
@@ -126,18 +131,11 @@ footer {
   height: 80px;
   flex-direction: column;
 }
-a {
-  color: black;
-  text-decoration: none;
+.fnav {
+  margin: 0 10px 10px 0;
 }
-.links {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 20%;
-}
-.link {
-  margin-right: 10px;
+.fnav > a {
+  margin-left: 5px;
 }
 .copyright {
   color: gray;
@@ -146,14 +144,17 @@ a {
 /* Add Breakpoints Here */
 /* Apply to certain size and above */
 
-@media only screen and (max-width: 600px) {
-  .fixed {
+@media only screen and (max-width: 800px) {
+  header {
     height: 15%;
   }
   header > img {
     margin: 0 auto;
   }
-  header, .pages {
+  header > button {
+    display: none;
+  }
+  header, .hnav {
     flex-direction: column;
     margin: auto;
   }
@@ -165,6 +166,7 @@ a {
   }
   .infotext {
     text-align: center;
+    margin-left: 0px;
   }
   .buy {
     flex-direction: column;

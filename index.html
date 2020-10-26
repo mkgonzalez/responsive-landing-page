@@ -8,14 +8,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
   </head>
+  <script> 
+    function themeSwitch() {
+      document.body.style.background = "#3d3d3d";
+      document.body.style.color = "#d1d1d1";
+      document.body.firstElementChild.style.background = "#3d3d3d";
+      document.body.lastElementChild.style.background = "#1c1c1c";
+      document.body.getElementsByClassName("bonehead")[0].style.background = "#1c1c1c";
+      document.body.getElementsByClassName("bonehead")[1].style.background = "#1c1c1c";
+      document.body.getElementsByClassName("bonehead")[2].style.background = "#1c1c1c";
+      let x = document.body.getElementsByTagName("a");
+      for (let i = 0; i < x.length; i++) {
+        x[i].style.color = "#d1d1d1";
+      }
+    }
+  </script>
   <body>
-  <header class="fixed">
+  <header>
     <img src="assets/images/original_trombones.png">
-    <div class="pages">
+    <nav class="hnav">
       <a href="#">Features</a>
       <a href="#">How It Works</a>
       <a href="#">Pricing</a>
-    </div>
+    </nav>
+    <button onclick="themeSwitch();">Dark Mode</button>
   </header>
   <div class="eform">
     <h1>
@@ -63,7 +79,7 @@
       </div>
     </div>
   </section>
-  <div class=video>
+  <div class="video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/y8Yv4pnO7qc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <div class="buy">
@@ -72,10 +88,12 @@
         <h3>Tenor Trombone</h3>
       </div>
       <h1>$600</h1>
-      <p>Lorem ipsum.</p>
-      <p>Lorem ipsum.</p>
-      <p>Lorem ipsum dolor.</p>
-      <p>Lorem ipsum.</p>
+      <ul>
+        <li>Lorem ipsum.</li>
+        <li>Lorem ipsum.</li>
+        <li>Lorem ipsum dolor.</li>
+        <li>Lorem ipsum.</li>
+      </ul>
       <button>Select</button>
     </div>
     <div class="trombone">
@@ -83,10 +101,12 @@
         <h3>Bass Trombone</h3>
       </div>
       <h1>$900</h1>
-      <p>Lorem ipsum.</p>
-      <p>Lorem ipsum.</p>
-      <p>Lorem ipsum dolor.</p>
-      <p>Lorem ipsum.</p>
+      <ul>
+        <li>Lorem ipsum.</li>
+        <li>Lorem ipsum.</li>
+        <li>Lorem ipsum dolor.</li>
+        <li>Lorem ipsum.</li>
+      </ul>
       <button>Select</button>
     </div>
     <div class="trombone">
@@ -94,31 +114,24 @@
         <h3>Valve Trombone</h3>
       </div>
       <h1>$1200</h1>
-      <p>Plays similar to a Trumpet.</p>
-      <p>Great for Jazz Bands</p>
-      <p>Lorem ipsum dolor.</p>
-      <p>Lorem ipsum.</p>
+      <ul>
+        <li>Plays similar to a Trumpet.</li>
+        <li>Great for Jazz Bands</li>
+        <li>Lorem ipsum dolor.</li>
+        <li>Lorem ipsum.</li>
+      </ul>
       <button>Select</button>
     </div>
   </div>
   <footer>
-    <div class="links">
-      <div class="link">
-        <a href="#">Privacy</a>
-      </div>
-      <div class="link">
-        <a href="#">Terms</a>
-      </div>
-      <div class="link">
-        <a href="#">Contact</a>
-      </div>
-    </div>
+    <nav class="fnav">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </nav>
     <div class="copyright">
       <p>Copyright 2016, Original Trombones</p>
     </div>
   </footer>
-    <div>
-      Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-    </div>
   </body>
 </html>
